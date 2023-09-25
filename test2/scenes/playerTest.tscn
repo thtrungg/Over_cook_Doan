@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3qb7xymuw3i5"]
+
+[ext_resource type="Script" path="res://scenes/player2test.gd" id="1_1gje1"]
+[ext_resource type="Texture2D" uid="uid://6xspjwo43bq2" path="res://assets/Pixelarium - Playable Character - Free Version/Pack Content/Front animations/spr_player_front_idle.png" id="1_b5qli"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rgmm1"]
+size = Vector2(15, 12)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="player2test" type="CharacterBody2D" parent="."]
+script = ExtResource("1_1gje1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player2test"]
+position = Vector2(-0.5, 6)
+shape = SubResource("RectangleShape2D_rgmm1")
+
+[node name="Sprite2D" type="Sprite2D" parent="player2test"]
+texture = ExtResource("1_b5qli")
+hframes = 12
