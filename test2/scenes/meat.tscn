@@ -5,10 +5,10 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_700bd"]
 atlas = ExtResource("1_dp7lp")
-region = Rect2(130.769, 521.688, 24.378, 15.5)
+region = Rect2(1.91812, 517.54, 22.0263, 20.8101)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ldnj2"]
-size = Vector2(6, 3.5)
+size = Vector2(6, 5)
 
 [node name="Meat" type="StaticBody2D"]
 position = Vector2(4, 61)
@@ -22,4 +22,5 @@ texture = SubResource("AtlasTexture_700bd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
+position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_ldnj2")

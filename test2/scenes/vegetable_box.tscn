@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://c8cqctikblfel"]
+
+[ext_resource type="Texture2D" uid="uid://vbo3cif0efdw" path="res://assets/kitchen/obj/Asset.png" id="1_k5xeg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pufss"]
+atlas = ExtResource("1_k5xeg")
+region = Rect2(64.0256, 560.35, 15.6751, 14.7292)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_amr7s"]
+size = Vector2(15, 14)
+
+[node name="VegetableBox" type="StaticBody2D"]
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_pufss")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_amr7s")

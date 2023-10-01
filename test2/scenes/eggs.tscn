@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dd66gkbflclpf"]
+
+[ext_resource type="Texture2D" uid="uid://vbo3cif0efdw" path="res://assets/kitchen/obj/Asset.png" id="1_dckgs"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ke0e5"]
+atlas = ExtResource("1_dckgs")
+region = Rect2(95.3358, 478.62, 16.5899, 16.5899)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ps42w"]
+size = Vector2(15, 14)
+
+[node name="Eggs" type="StaticBody2D"]
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_ke0e5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(0.5, 1)
+shape = SubResource("RectangleShape2D_ps42w")
