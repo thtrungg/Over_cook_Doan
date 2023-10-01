@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cwuqc17w87ddb"]
+
+[ext_resource type="Texture2D" uid="uid://btnlfsqdh56wj" path="res://assets/building/TopDownHouse_SmallItems.png" id="1_oay44"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_idb07"]
+atlas = ExtResource("1_oay44")
+region = Rect2(64.1063, 86.5124, 15.9454, 8.91862)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aavml"]
+size = Vector2(16, 8)
+
+[node name="Pan" type="StaticBody2D"]
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_idb07")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_aavml")

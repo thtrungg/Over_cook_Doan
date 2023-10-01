@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://w53pa7757wea"]
+
+[ext_resource type="Script" path="res://scenes/slice.gd" id="1_0qmw3"]
+[ext_resource type="Texture2D" uid="uid://dunqmtqhttosa" path="res://assets/kitchen/obj/MegaPixelArt32x32pxIcons_SpriteSheet.png" id="1_aydrn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e8ofn"]
+atlas = ExtResource("1_aydrn")
+region = Rect2(1.64769, 518.08, 22.7019, 20.675)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hrksc"]
+size = Vector2(21, 17.5)
+
+[node name="Slice" type="RigidBody2D"]
+script = ExtResource("1_0qmw3")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_e8ofn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.25)
+shape = SubResource("RectangleShape2D_hrksc")

@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgv4ubtkd1mqi"]
+
+[ext_resource type="Texture2D" uid="uid://dunqmtqhttosa" path="res://assets/kitchen/obj/MegaPixelArt32x32pxIcons_SpriteSheet.png" id="1_dp7lp"]
+[ext_resource type="Script" path="res://scenes/meat.gd" id="1_qph0f"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_700bd"]
+atlas = ExtResource("1_dp7lp")
+region = Rect2(130.769, 521.688, 24.378, 15.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ldnj2"]
+size = Vector2(6, 3.5)
+
+[node name="Meat" type="StaticBody2D"]
+position = Vector2(4, 61)
+script = ExtResource("1_qph0f")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 0.0624991)
+scale = Vector2(0.25, 0.258333)
+texture = SubResource("AtlasTexture_700bd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_ldnj2")

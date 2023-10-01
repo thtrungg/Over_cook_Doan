@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://s4ft50fwvqu4"]
+
+[ext_resource type="Script" path="res://scenes/knife.gd" id="1_hduer"]
+[ext_resource type="Texture2D" uid="uid://dunqmtqhttosa" path="res://assets/kitchen/obj/MegaPixelArt32x32pxIcons_SpriteSheet.png" id="1_ta57b"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_krs1j"]
+atlas = ExtResource("1_ta57b")
+region = Rect2(303.484, 324.243, 11.0807, 25.4046)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_and6b"]
+size = Vector2(4, 8)
+
+[node name="Knife" type="RigidBody2D"]
+visible = false
+position = Vector2(3, 0)
+script = ExtResource("1_hduer")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2.38419e-07, 0)
+scale = Vector2(0.409091, 0.38)
+texture = SubResource("AtlasTexture_krs1j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_and6b")
